@@ -1,19 +1,6 @@
-import { useState } from "react";
+/* eslint-disable react/prop-types */
 
-function BasicInfo() {
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    position: "",
-  });
-
-  const handleChange = (event) => {
-    const { name, value } = event.target;
-    setFormData((prevData) => ({
-      ...prevData,
-      [name]: value,
-    }));
-  };
+function BasicInfo({ formData, handleChange }) {
   return (
     <div className="basicInfo">
       <form>
