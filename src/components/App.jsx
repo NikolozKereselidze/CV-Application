@@ -2,6 +2,7 @@ import { useState } from "react";
 
 import "../styles/App.css";
 import BasicInfo from "./BasicInfo";
+import Summary from "./Summary";
 
 function App() {
   const [formData, setFormData] = useState({
@@ -19,7 +20,12 @@ function App() {
     }));
   };
 
-  return <BasicInfo handleChange={handleChange} formData={formData} />;
+  return (
+    <>
+      <BasicInfo handleChange={handleChange} formData={formData} />
+      <Summary handleChange={handleChange} formData={formData} />
+    </>
+  );
 }
 
 export default App;
