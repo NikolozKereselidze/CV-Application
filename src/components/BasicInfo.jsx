@@ -1,9 +1,10 @@
 /* eslint-disable react/prop-types */
+import "../styles/BasicInfo.css";
 
 function BasicInfo({ formData, handleChange }) {
   return (
     <div className="basicInfo">
-      <form>
+      <form className="info">
         <input
           type="text"
           name="name"
