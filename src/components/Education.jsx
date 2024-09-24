@@ -1,13 +1,14 @@
 /* eslint-disable react/prop-types */
 function Education({ formData, handleChange }) {
   return (
-    <div className="Education">
+    <div className="education">
+      <h2>Education</h2>
       <form>
         <input type="text" name="university" id="" placeholder="University" />
         <input type="text" name="degree" id="" placeholder="Degree" />
 
         <label>
-          <span>Start Year</span>
+          <span>Start Year: </span>
           <input
             type="month"
             name="uniStartYear"
@@ -17,7 +18,7 @@ function Education({ formData, handleChange }) {
         </label>
 
         <label>
-          <span>End Year</span>
+          <span>End Year: </span>
           <input
             type="month"
             name="uniEndYear"

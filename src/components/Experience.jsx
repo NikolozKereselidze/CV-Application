@@ -5,6 +5,7 @@ function Experience({ formData, handleChange }) {
   return (
     <>
       <div className="experience">
+        <h2>Experience</h2>
         <form>
           <input
             type="text"
@@ -23,7 +24,7 @@ function Experience({ formData, handleChange }) {
           />
 
           <label className="experience-label">
-            <span>Starting Year: </span>
+            <span>Start Year: </span>
             <input
               type="month"
               name="jobStartYear"

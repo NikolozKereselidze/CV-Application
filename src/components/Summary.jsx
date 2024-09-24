@@ -4,6 +4,7 @@ import "../styles/Summary.css";
 function Summary({ formData, handleChange }) {
   return (
     <div className="summary">
+      <h2>Summary</h2>
       <form>
         <textarea
           name="summary"

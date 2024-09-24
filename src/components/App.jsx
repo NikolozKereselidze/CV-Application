@@ -14,13 +14,13 @@ function App() {
     summary: "",
     jobTitle: "",
     workplace: "",
-    jobStartYear: "",
-    jobEndYear: "",
+    jobStartYear: "2020-04",
+    jobEndYear: "2024-04",
     role: "",
     university: "",
     degree: "",
-    uniStartYear: "",
-    uniEndYear: "",
+    uniStartYear: "2020-04",
+    uniEndYear: "2024-04",
   });
 
   const handleChange = (event) => {

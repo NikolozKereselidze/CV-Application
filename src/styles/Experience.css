@@ -1,5 +1,26 @@
+.experience h2 {
+}
+
 .experience-label {
   display: flex;
   align-items: center;
   gap: 0.6rem;
+}
+
+.add-experience {
+  margin-bottom: 2rem;
+}
+
+.add-experience > button {
+  width: 100%;
+  padding: 0.6rem 0.8rem;
+  border-style: none;
+  border-radius: 0.3rem;
+  background-color: #112a46;
+  color: #f4f5f4;
+  transition: transform 0.3s;
+}
+
+.add-experience > button:hover {
+  transform: scale(1.05);
 }
