@@ -1,6 +1,16 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
 #root {
-  background-color: #fff;
-  padding: 2rem;
+  background-color: #cecdcd8c;
+  display: flex;
+  gap: 8rem;
 }
 
 form {
@@ -31,7 +41,8 @@ textarea {
 }
 
 .cv-form {
-  width: 30vw;
+  width: 35vw;
+  max-width: 40vw;
   background-color: #f4f5f4;
   padding: 2rem;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
