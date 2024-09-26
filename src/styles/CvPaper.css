@@ -1,0 +1,95 @@
+.cv-container {
+  width: 40vw;
+  max-width: 45vw;
+  padding: 1.2rem;
+  background-color: #fff;
+  box-shadow: #3c40434d 0 1px 2px, #3c404326 0 2px 6px 2px;
+}
+
+.cv-paper {
+  width: 100%;
+  max-width: 100%;
+  display: grid;
+  grid-template-columns: 350px 1fr;
+  grid-template-rows: auto 1fr;
+  gap: 1.4rem;
+}
+
+i,
+.cv-paper h1,
+.cv-paper h2 {
+  color: #00457e;
+}
+
+.cv-paper h1 {
+  font-weight: 400;
+  font-size: 1.4rem;
+}
+
+.cv-paper h2 {
+  font-weight: 300;
+  font-size: 1.2rem;
+}
+
+.cv-paper p {
+  font-weight: 300;
+  font-size: 0.8rem;
+}
+
+.contact-print > i {
+  letter-spacing: 1px;
+  line-height: 0.7rem;
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  font-size: 0.9rem;
+}
+
+i span,
+i a {
+  color: #000;
+  font-weight: 300;
+  word-break: break-all;
+  font-size: 0.6rem;
+  text-decoration: none;
+}
+
+.basics-print {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.contact-print {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.job-print {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.job-print h1 {
+  padding-bottom: 0.4rem;
+  border-bottom: 1px solid #00457e;
+}
+
+.job-print--details {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.job-print--wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.job-print--years {
+  display: flex;
+  font-weight: 300;
+  font-size: 0.7rem;
+}

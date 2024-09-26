@@ -5,20 +5,25 @@ import BasicInfo from "./BasicInfo";
 import Summary from "./Summary";
 import Experience from "./Experience";
 import Education from "./Education";
+import CvPaper from "./CvPaper";
 
 function App() {
   const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    position: "",
-    summary: "",
-    jobTitle: "",
-    workplace: "",
+    name: "Nikoloz Kereselidze",
+    position: "Frond End Developer",
+    email: "test@gmail.com",
+    phone: "597-35-35-77",
+    summary:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium corporis eligendi quos natus consectetur sint eum nobis dolore neque error reiciendis explicabo ex minima",
+    location: "Tbilisi, Georgia",
+    website: "linkedin.com/nikoloz-kereselidze",
+    jobTitle: "Web Developer",
+    workplace: "Own Company",
     jobStartYear: "2020-04",
     jobEndYear: "2024-04",
-    role: "",
-    university: "",
-    degree: "",
+    role: "develop new features",
+    university: "Tbilisi State University",
+    degree: "Computer Science",
     uniStartYear: "2020-04",
     uniEndYear: "2024-04",
   });
@@ -33,12 +38,17 @@ function App() {
   };
 
   return (
-    <section className="cv-form">
-      <BasicInfo handleChange={handleChange} formData={formData} />
-      <Summary handleChange={handleChange} formData={formData} />
-      <Experience handleChange={handleChange} formData={formData} />
-      <Education handleChange={handleChange} formData={formData} />
-    </section>
+    <>
+      <section className="cv-form">
+        <BasicInfo handleChange={handleChange} formData={formData} />
+        <Summary handleChange={handleChange} formData={formData} />
+        <Experience handleChange={handleChange} formData={formData} />
+        <Education handleChange={handleChange} formData={formData} />
+      </section>
+      <section className="cv-container">
+        <CvPaper formData={formData} />
+      </section>
+    </>
   );
 }
 
