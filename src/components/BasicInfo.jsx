@@ -14,6 +14,14 @@ function BasicInfo({ formData, handleChange }) {
         />
 
         <input
+          type="text"
+          name="position"
+          value={formData.position}
+          onChange={handleChange}
+          placeholder="Position"
+        />
+
+        <input
           type="email"
           name="email"
           value={formData.email}
@@ -22,11 +30,26 @@ function BasicInfo({ formData, handleChange }) {
         />
 
         <input
-          type="text"
-          name="position"
-          value={formData.position}
+          type="tel"
+          name="phone"
+          value={formData.phone}
           onChange={handleChange}
-          placeholder="Position"
+          placeholder="Phone"
+        />
+
+        <input
+          type="text"
+          name="location"
+          value={formData.location}
+          onChange={handleChange}
+          placeholder="Location"
+        />
+        <input
+          type="url"
+          name="website"
+          value={formData.website}
+          onChange={handleChange}
+          placeholder="Website"
         />
       </form>
     </div>
