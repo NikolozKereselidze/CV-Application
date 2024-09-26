@@ -4,8 +4,20 @@ function Education({ formData, handleChange }) {
     <div className="education">
       <h2>Education</h2>
       <form>
-        <input type="text" name="university" id="" placeholder="University" />
-        <input type="text" name="degree" id="" placeholder="Degree" />
+        <input
+          type="text"
+          name="university"
+          placeholder="University"
+          value={formData.university}
+          onChange={handleChange}
+        />
+        <input
+          type="text"
+          name="degree"
+          placeholder="Degree"
+          value={formData.degree}
+          onChange={handleChange}
+        />
 
         <label>
           <span>Start Year: </span>
