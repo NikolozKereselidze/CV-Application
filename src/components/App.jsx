@@ -6,11 +6,12 @@ import Summary from "./Summary";
 import Experience from "./Experience";
 import Education from "./Education";
 import CvPaper from "./CvPaper";
+import Skills from "./Skills";
 
 function App() {
   const [formData, setFormData] = useState({
     name: "Nikoloz Kereselidze",
-    position: "Frond End Developer",
+    position: "Front End Developer",
     email: "test@gmail.com",
     phone: "597-35-35-77",
     summary:
@@ -21,11 +22,12 @@ function App() {
     workplace: "Own Company",
     jobStartYear: "2020-04",
     jobEndYear: "2024-04",
-    role: "develop new features",
+    role: "Lorem ipsum dolor sit amet consectetur adipisicing elit. quos natus consectetur sint",
     university: "Tbilisi State University",
     degree: "Computer Science",
     uniStartYear: "2020-04",
     uniEndYear: "2024-04",
+    skills: "",
   });
 
   const handleChange = (event) => {
@@ -42,8 +44,9 @@ function App() {
       <section className="cv-form">
         <BasicInfo handleChange={handleChange} formData={formData} />
         <Summary handleChange={handleChange} formData={formData} />
-        <Experience handleChange={handleChange} formData={formData} />
         <Education handleChange={handleChange} formData={formData} />
+        <Experience handleChange={handleChange} formData={formData} />
+        <Skills handleChange={handleChange} formData={formData} />
       </section>
       <section className="cv-container">
         <CvPaper formData={formData} />

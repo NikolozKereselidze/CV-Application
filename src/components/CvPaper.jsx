@@ -2,7 +2,6 @@
 import "../styles/CvPaper.css";
 
 function CvPaper({ formData }) {
-  console.log(formData);
   return (
     <div className="cv-paper">
       <div className="basics-print">
@@ -10,7 +9,6 @@ function CvPaper({ formData }) {
         <h2>{formData.position}</h2>
         <p>{formData.summary}</p>
       </div>
-
       <div className="contact-print">
         <i className="fa-solid fa-envelope">
           <span>{formData.email}</span>
@@ -28,30 +26,47 @@ function CvPaper({ formData }) {
           <a href={formData.website}>{formData.website}</a>
         </i>
       </div>
+      <div className="job-education--wrapper">
+        <div className="job-print">
+          <h1>Work Experience</h1>
+          <div className="job-print--details">
+            <div className="job-print--wrapper">
+              <div className="job-print--title">
+                <h2>{formData.jobTitle}</h2>
+              </div>
+              <div className="job-print--years">
+                <span>{formData.jobStartYear}-</span>
+                <span>{formData.jobEndYear}</span>
+              </div>
+            </div>
+            <h3 className="print-workplace">{formData.workplace}</h3>
 
-      <div className="job-print">
-        <h1>Work Experience</h1>
-        <div className="job-print--details">
-          <div className="job-print--wrapper">
-            <div className="job-print--title">
-              <h2>{formData.jobTitle}</h2>
-              <h2>{formData.workplace}</h2>
-            </div>
-            <div className="job-print--years">
-              <span>{formData.jobStartYear}-</span>
-              <span>{formData.jobEndYear}</span>
-            </div>
+            <p>{formData.role}</p>
           </div>
+        </div>
 
-          <h2>{formData.role}</h2>
+        <div className="education-print">
+          <h1>Educational background</h1>
+          <div className="education-print--details">
+            <div className="education-print--wrapper">
+              <div className="education-print--title">
+                <h2>{formData.university}</h2>
+              </div>
+              <div className="education-print--years">
+                <span>{formData.uniStartYear}-</span>
+                <span>{formData.uniEndYear}</span>
+              </div>
+            </div>
+            <h3 className="education-degree">{formData.degree}</h3>
+          </div>
         </div>
       </div>
-
-      <div className="university-print">
-        <h2>{formData.university}</h2>
-        <h2>{formData.degree}</h2>
-        <h2>{formData.uniStartYear}</h2>
-        <h2>{formData.uniEndYear}</h2>
+      <div className="skills-print">
+        <h1>Technikal Skills</h1>
+        <div className="skills-wrapper">
+          {formData.skills ? <i className="fa-regular fa-circle"></i> : ""}
+          <h2>{formData.skills}</h2>
+        </div>
       </div>
     </div>
   );

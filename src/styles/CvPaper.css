@@ -1,7 +1,7 @@
 .cv-container {
-  width: 40vw;
+  width: 42vw;
   max-width: 45vw;
-  padding: 1.2rem;
+  padding: 0.8rem;
   background-color: #fff;
   box-shadow: #3c40434d 0 1px 2px, #3c404326 0 2px 6px 2px;
 }
@@ -10,7 +10,7 @@
   width: 100%;
   max-width: 100%;
   display: grid;
-  grid-template-columns: 350px 1fr;
+  grid-template-columns: 300px 1fr;
   grid-template-rows: auto 1fr;
   gap: 1.4rem;
 }
@@ -22,13 +22,20 @@ i,
 }
 
 .cv-paper h1 {
-  font-weight: 400;
-  font-size: 1.4rem;
+  font-weight: 300;
+  font-size: 1.1rem;
+  padding-bottom: 0.4rem;
+  border-bottom: 1px solid #00457e;
 }
 
 .cv-paper h2 {
-  font-weight: 300;
-  font-size: 1.2rem;
+  font-weight: 200;
+  font-size: 1rem;
+}
+
+.cv-paper h3 {
+  font-weight: 200;
+  font-size: 0.9rem;
 }
 
 .cv-paper p {
@@ -66,30 +73,43 @@ i a {
   justify-content: space-evenly;
 }
 
-.job-print {
+.job-print,
+.education-print {
   display: flex;
   flex-direction: column;
   gap: 0.8rem;
 }
 
-.job-print h1 {
-  padding-bottom: 0.4rem;
-  border-bottom: 1px solid #00457e;
-}
-
-.job-print--details {
+.job-print--details,
+.education-print--details {
   display: flex;
   flex-direction: column;
   gap: 0.3rem;
 }
 
-.job-print--wrapper {
+.job-print--wrapper,
+.education-print--wrapper {
   display: flex;
   justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 0.4rem;
 }
 
-.job-print--years {
+.job-print--years,
+.education-print--years {
   display: flex;
   font-weight: 300;
-  font-size: 0.7rem;
+  font-size: 0.8rem;
+}
+
+.print-workplace,
+.education-degree {
+  font-weight: 400;
+  display: flex;
+}
+
+.job-education--wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 1.4rem;
 }

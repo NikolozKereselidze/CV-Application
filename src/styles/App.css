@@ -18,11 +18,13 @@ form {
   flex-direction: column;
   padding-bottom: 2rem;
   gap: 1.2rem;
+  margin-top: 1.2rem;
 }
 
 .summary h2,
 .experience h2,
-.education h2 {
+.education h2,
+.skills h2 {
   color: #112a46;
   text-align: center;
   border-bottom: 1px solid #112a46;
@@ -50,4 +52,20 @@ textarea {
 
 button {
   cursor: pointer;
+}
+
+.add-experience > button,
+.add-skill > button {
+  width: 100%;
+  padding: 0.6rem 0.8rem;
+  border-style: none;
+  border-radius: 0.3rem;
+  background-color: #112a46;
+  color: #f4f5f4;
+  transition: transform 0.3s;
+}
+
+.add-experience > button:hover,
+.add-skill > button:hover {
+  transform: scale(1.05);
 }
