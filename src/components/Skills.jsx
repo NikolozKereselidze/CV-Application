@@ -12,12 +12,12 @@ function Skills({ formData, handleChange }) {
           placeholder="Skill"
           value={formData.skills}
           onChange={handleChange}
+          required
         />
+        <div className="add-skill">
+          <button>Add Skill</button>
+        </div>
       </form>
-
-      <div className="add-skill">
-        <button>Add Skill</button>
-      </div>
     </div>
   );
 }

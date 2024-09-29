@@ -12,6 +12,7 @@ function Experience({ formData, handleChange }) {
             name="jobTitle"
             placeholder="Job Title"
             value={formData.jobTitle}
+            required
             onChange={handleChange}
           />
 
@@ -20,6 +21,7 @@ function Experience({ formData, handleChange }) {
             name="workplace"
             placeholder="Workplace"
             value={formData.workplace}
+            required
             onChange={handleChange}
           />
 
@@ -30,6 +32,7 @@ function Experience({ formData, handleChange }) {
               name="jobStartYear"
               value={formData.jobStartYear}
               onChange={handleChange}
+              required
             />
           </label>
 
@@ -41,21 +44,23 @@ function Experience({ formData, handleChange }) {
               value={formData.jobEndYear}
               min={formData.jobStartYear}
               onChange={handleChange}
+              required
             />
           </label>
 
           <textarea
-            name="jobRole"
+            name="role"
             placeholder="Your role at that position"
             rows="8"
             value={formData.role}
             onChange={handleChange}
+            required
           ></textarea>
-        </form>
 
-        <div className="add-experience">
-          <button>Add Experience</button>
-        </div>
+          <div className="add-experience">
+            <button>Add Experience</button>
+          </div>
+        </form>
       </div>
     </>
   );

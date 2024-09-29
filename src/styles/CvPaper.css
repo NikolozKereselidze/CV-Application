@@ -1,4 +1,5 @@
 .cv-container {
+  height: 100vh;
   width: 42vw;
   max-width: 45vw;
   padding: 0.8rem;
