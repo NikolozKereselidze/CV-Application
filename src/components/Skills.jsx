@@ -1,21 +1,31 @@
 /* eslint-disable react/prop-types */
 import "../styles/Skills.css";
+import { useState } from "react";
 
-function Skills({ formData, handleChange }) {
+function Skills({ addSkill }) {
+  const [skill, setSkill] = useState("");
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+
+    setSkill("");
+    addSkill(skill);
+  };
+
   return (
     <div className="skills">
       <h2>Skills</h2>
-      <form>
+      <form onSubmit={handleSubmit}>
         <input
           type="text"
           name="skills"
           placeholder="Skill"
-          value={formData.skills}
-          onChange={handleChange}
+          value={skill}
+          onChange={(e) => setSkill(e.target.value)}
           required
         />
         <div className="add-skill">
-          <button>Add Skill</button>
+          <button type="submit">Add Skill</button>
         </div>
       </form>
     </div>

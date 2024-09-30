@@ -3,3 +3,9 @@
   align-items: center;
   gap: 0.2rem;
 }
+
+.skills-print {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}

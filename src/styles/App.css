@@ -43,6 +43,8 @@ textarea {
 }
 
 .cv-form {
+  height: 100vh; /* Set a maximum height */
+  overflow-y: auto; /* Enable vertical scrolling */
   width: 35vw;
   max-width: 40vw;
   background-color: #f4f5f4;
@@ -68,4 +70,151 @@ button {
 .add-experience > button:hover,
 .add-skill > button:hover {
   transform: scale(1.05);
+}
+
+@media all and (max-width: 1200px) {
+  #root {
+    flex-direction: column;
+    align-items: center;
+    gap: 4rem;
+  }
+
+  .cv-form,
+  .cv-container {
+    width: 45vw;
+    max-width: 50vw;
+  }
+
+  .cv-container > .cv-paper {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .cv-paper h1 {
+    font-size: 0.8rem !important;
+  }
+
+  .cv-paper h2 {
+    font-size: 0.7rem !important;
+  }
+
+  .cv-paper p {
+    font-size: 0.6rem !important;
+  }
+
+  .basics-print {
+    grid-column: 1 / -1;
+  }
+
+  .job-education--wrapper {
+    grid-column: 1 / 2;
+    grid-row: 3;
+  }
+
+  .education-print {
+    grid-column: 1 / -1;
+    grid-row: 2;
+  }
+
+  .skills-print {
+    grid-column: 2 / -1;
+    grid-row: 3;
+  }
+
+  .contact-print {
+    grid-column: 1 / -1;
+    grid-row: 4;
+    gap: 0.4rem;
+    align-items: center;
+  }
+}
+
+@media all and (max-width: 900px) {
+  h2 {
+    font-size: 1rem;
+  }
+
+  input,
+  textarea {
+    font-size: 0.6rem;
+  }
+
+  label > span {
+    font-size: 0.7rem;
+  }
+
+  .info > input,
+  input {
+    padding: 0.6rem 1rem !important;
+  }
+
+  .add-experience > button,
+  .add-skill > button {
+    padding: 0.4rem 0.6rem;
+    font-size: 0.6rem;
+  }
+
+  i span,
+  i a {
+    font-size: 0.5rem !important;
+  }
+
+  .fa-print {
+    margin: 0.4rem !important;
+    font-size: 1.3rem !important;
+  }
+
+  .cv-form,
+  .cv-container {
+    width: 60vw !important;
+    max-width: 65vw !important;
+  }
+
+  .cv-container {
+    height: 100%;
+  }
+
+  .job-education--wrapper {
+    grid-row: 3;
+    grid-column: 1 / -1;
+  }
+  .skills-print {
+    grid-column: 1 / -1;
+    grid-row: 4;
+  }
+
+  .education-print {
+    grid-row: 2;
+  }
+
+  .contact-print {
+    grid-row: 5;
+  }
+
+  .education-print--years,
+  .job-print--years {
+    font-size: 0.6rem !important;
+  }
+}
+
+@media print {
+  .cv-form {
+    display: none;
+  }
+
+  .cv-container {
+    padding: 0 !important;
+    height: 100vh !important;
+    max-height: 100vh !important;
+    width: 100vw !important;
+    max-width: 100vw !important;
+    box-shadow: none !important;
+  }
+
+  .contact-print {
+    gap: 1.2rem;
+  }
+
+  .print-button--container {
+    display: none;
+  }
 }

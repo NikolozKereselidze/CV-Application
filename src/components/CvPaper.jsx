@@ -26,48 +26,55 @@ function CvPaper({ formData }) {
           <a href={formData.website}>{formData.website}</a>
         </i>
       </div>
+      <div className="education-print">
+        <h1>Educational background</h1>
+        <div className="education-print--details">
+          <div className="education-print--wrapper">
+            <div className="education-print--title">
+              <h2>{formData.university}</h2>
+            </div>
+            <div className="education-print--years">
+              <span>{formData.uniStartYear}-</span>
+              <span>{formData.uniEndYear}</span>
+            </div>
+          </div>
+          <h3 className="education-degree">{formData.degree}</h3>
+        </div>
+      </div>
       <div className="job-education--wrapper">
-        <div className="job-print">
-          <h1>Work Experience</h1>
-          <div className="job-print--details">
-            <div className="job-print--wrapper">
-              <div className="job-print--title">
-                <h2>{formData.jobTitle}</h2>
-              </div>
-              <div className="job-print--years">
-                <span>{formData.jobStartYear}-</span>
-                <span>{formData.jobEndYear}</span>
-              </div>
-            </div>
-            <h3 className="print-workplace">{formData.workplace}</h3>
+        {formData.experiences.length > 0 && (
+          <div className="job-print">
+            <h1>Work Experience</h1>
+            {formData.experiences.map((experience, index) => (
+              <div key={index} className="job-print--details">
+                <div className="job-print--wrapper">
+                  <div className="job-print--title">
+                    <h2>{experience.jobTitle}</h2>
+                  </div>
+                  <div className="job-print--years">
+                    <span>{experience.jobStartYear}-</span>
+                    <span>{experience.jobEndYear}</span>
+                  </div>
+                </div>
+                <h3 className="print-workplace">{experience.workplace}</h3>
 
-            <p>{formData.role}</p>
+                <p>{experience.role}</p>
+              </div>
+            ))}
           </div>
-        </div>
-
-        <div className="education-print">
-          <h1>Educational background</h1>
-          <div className="education-print--details">
-            <div className="education-print--wrapper">
-              <div className="education-print--title">
-                <h2>{formData.university}</h2>
-              </div>
-              <div className="education-print--years">
-                <span>{formData.uniStartYear}-</span>
-                <span>{formData.uniEndYear}</span>
-              </div>
+        )}
+      </div>
+      {formData.skills.length > 0 && (
+        <div className="skills-print">
+          <h1>Technical Skills</h1>
+          {formData.skills.map((skill, index) => (
+            <div key={index} className="skills-wrapper">
+              <i className="fa-regular fa-circle"></i>
+              <h2>{skill}</h2>
             </div>
-            <h3 className="education-degree">{formData.degree}</h3>
-          </div>
+          ))}
         </div>
-      </div>
-      <div className="skills-print">
-        <h1>Technikal Skills</h1>
-        <div className="skills-wrapper">
-          {formData.skills ? <i className="fa-regular fa-circle"></i> : ""}
-          <h2>{formData.skills}</h2>
-        </div>
-      </div>
+      )}
     </div>
   );
 }
