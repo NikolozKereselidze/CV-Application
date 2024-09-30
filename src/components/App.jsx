@@ -7,6 +7,7 @@ import Experience from "./Experience";
 import Education from "./Education";
 import CvPaper from "./CvPaper";
 import Skills from "./Skills";
+import Print from "./Print";
 
 function App() {
   const [formData, setFormData] = useState({
@@ -18,16 +19,12 @@ function App() {
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium corporis eligendi quos natus consectetur sint eum nobis dolore neque error reiciendis explicabo ex minima",
     location: "Tbilisi, Georgia",
     website: "linkedin.com/nikoloz-kereselidze",
-    jobTitle: "Web Developer",
-    workplace: "Own Company",
-    jobStartYear: "2020-04",
-    jobEndYear: "2024-04",
-    role: "Lorem ipsum dolor sit amet consectetur adipisicing elit. quos natus consectetur sint",
+    experiences: [],
     university: "Tbilisi State University",
     degree: "Computer Science",
     uniStartYear: "2020-04",
     uniEndYear: "2024-04",
-    skills: "",
+    skills: [],
   });
 
   const handleChange = (event) => {
@@ -39,18 +36,33 @@ function App() {
     }));
   };
 
+  const addSkill = (skill) => {
+    setFormData((prevData) => ({
+      ...prevData,
+      skills: [...prevData.skills, skill],
+    }));
+  };
+
+  const addExperience = (experience) => {
+    setFormData((prevData) => ({
+      ...prevData,
+      experiences: [...prevData.experiences, experience],
+    }));
+  };
+
   return (
     <>
       <section className="cv-form">
         <BasicInfo handleChange={handleChange} formData={formData} />
         <Summary handleChange={handleChange} formData={formData} />
         <Education handleChange={handleChange} formData={formData} />
-        <Experience handleChange={handleChange} formData={formData} />
-        <Skills handleChange={handleChange} formData={formData} />
+        <Experience addExperience={addExperience} />
+        <Skills addSkill={addSkill} />
       </section>
       <section className="cv-container">
         <CvPaper formData={formData} />
       </section>
+      <Print />
     </>
   );
 }

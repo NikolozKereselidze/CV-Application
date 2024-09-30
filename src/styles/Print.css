@@ -1,0 +1,13 @@
+.fa-print {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  margin: 1.8rem;
+  font-size: 1.8rem;
+  transition: color 0.2s, transform 0.2s;
+}
+
+.fa-print:hover {
+  transform: scale(1.05);
+  color: #006bb3;
+}
